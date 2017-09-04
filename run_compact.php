@@ -11,7 +11,7 @@ $excluded_dbs = [
 ];
 
 //https://github.com/MaksymSemenykhin/php-HTTPRequester
-include 'HTTPRequester.php';
+include 'HTTPRequester/HTTPRequester.php';
 
 define(HTTPRVERBOSE,true);
 
