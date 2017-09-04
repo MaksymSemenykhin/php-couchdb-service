@@ -1,6 +1,6 @@
 <?php
 
-if(empty($argv))
+if(empty($argv) || !isset($argv[1]))
     die('[ERROR] db_host was not passed to script as first parameter');
 
 $db_host = $argv[1];
