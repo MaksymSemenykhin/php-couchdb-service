@@ -13,7 +13,7 @@ $excluded_dbs = [
 //https://github.com/MaksymSemenykhin/php-HTTPRequester
 include 'HTTPRequester.php';
 
-define(HTTPRVERBOSE,true);
+define('HTTPRVERBOSE',true);
 
 $all_dbs = file_get_contents($db_host.'/_all_dbs');
 if(!$all_dbs){
