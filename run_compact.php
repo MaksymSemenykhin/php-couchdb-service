@@ -3,7 +3,11 @@
 if(empty($argv) || !isset($argv[1]))
     die('[ERROR] db_host was not passed to script as first parameter');
 
+if(empty($argv) || !isset($argv[2]))
+    die('[ERROR] revs_limit was not passed to script as second parameter');
+
 $db_host = $argv[1];
+$revs_limit = $argv[2];
 
 $excluded_dbs = [
 	'_replicator',
@@ -29,7 +33,8 @@ foreach($all_dbs as $count => $db){
 
 	echo " ==> $db #$count\n";
 	
-	print_r(HTTPRequester::HTTPPost($db_host."/$db/_compact",[],['Content-Type: application/json']) );	
+	print_r(HTTPRequester::HTTPPost($db_host."/$db/_compact"   ,[]         ,['Content-Type: application/json']) );	
+        print_r(HTTPRequester::HTTPput ($db_host."/$db/_revs_limit",$revs_limit,['Content-Type: application/json']) );	
 	
 }
 
