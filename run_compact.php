@@ -33,7 +33,7 @@ foreach($all_dbs as $count => $db){
 
 	echo " ==> $db #$count\n";
 	
-        print_r(HTTPRequester::HTTPput ($db_host."/$db/_revs_limit",[$revs_limit],['Content-Type: application/json']) );	
+        print_r(HTTPRequester::HTTPput ($db_host."/$db/_revs_limit",$revs_limit) );	
 	print_r(HTTPRequester::HTTPPost($db_host."/$db/_compact"   ,[]           ,['Content-Type: application/json']) );	
 	
 	
