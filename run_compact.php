@@ -12,6 +12,8 @@ $revs_limit = $argv[2];
 $excluded_dbs = [
 	'_replicator',
 	'_users',
+	'_metadata',
+	'_global_changes',
 ];
 
 //https://github.com/MaksymSemenykhin/php-HTTPRequester
