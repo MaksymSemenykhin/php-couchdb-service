@@ -17,6 +17,7 @@ $excluded_dbs = [
         '_replicator',
         '_users',
 ];
+$excluded_dbs = [];
 
 
 include 'HTTPRequester.php';
