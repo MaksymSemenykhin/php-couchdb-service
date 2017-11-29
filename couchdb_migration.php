@@ -1,7 +1,7 @@
 <?php
 #https://blog.couchdb.org/2016/08/17/migrating-to-couchdb-2-0/
 
-php ./couchdb_migration.php  http://localhost:5984 http://localhost:5986
+#php ./couchdb_migration.php  http://localhost:5984 http://localhost:5986
 
 if(empty($argv) || !isset($argv[1]))
     die('[ERROR] db_from was not passed to script as first parameter');
